@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://detective-conan-client.onrender.com")
 @RequestMapping("/api/v1/votes")
 
 public class VoteController {
