@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RequestMapping("/api/v1/reviews")
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://detective-conan-client.onrender.com")
 
 public class ReviewController {
 
