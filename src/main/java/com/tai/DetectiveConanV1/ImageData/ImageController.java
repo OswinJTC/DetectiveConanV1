@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://detective-conan-client.onrender.com")
 @RequestMapping("/api/v1/images")
 public class ImageController {
 
