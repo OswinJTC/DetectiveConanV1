@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.Optional;
 
 @Service
@@ -39,6 +40,13 @@ public class StorageService {
                 .build());
 
         if (imageData != null) {
+
+            Collections Collections = null;
+            mongoTemplate.update(User.class)
+                    .matching(Criteria.where("username").is(username))
+                    .apply(new Update().set("profilePhoto", Collections.emptyList())) // Clear the list
+                    .first();
+
             mongoTemplate.update(User.class)
                     .matching(Criteria.where("username").is(username))
                     .apply(new Update().push("profilePhoto").value(imageData))
